@@ -2,18 +2,44 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src='script.js' defer></script>
-	<title>Lab 04</title>
-	<!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='script.js' defer></script>
+    <title>To Do List</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
 </head>
 
-<body>
-	<h1>Minimal Todo List</h1>
-	<input  type='text'>
-	<button>+</button>
+<body class="">
+    <div class="box mt-5 rounded-lg md:max-w-screen-lg max-w-screen-sm mx-auto p-10 h-auto shadow-lg ring-1 ring-gray-300 justify-center pt-12  ">
+
+
+        <h1>Minimal Todo List</h1>
+
+        <div class="flex pt-6 justify-center">
+
+            <input class="rounded md:rounded-lg " id="userInput">
+            <div class="pl-6">
+                <div id="enter">
+                    <button>+</button>
+                </div>
+            </div>
+        </div>
+        <ul>
+            <!-- <li>
+                ffffffffffffff
+                <button id="bt2" class="pl-6">Done</button>
+                <button id="bt1">Delete</button>
+            </li> -->
+        </ul>
+    </div>
+
+
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
