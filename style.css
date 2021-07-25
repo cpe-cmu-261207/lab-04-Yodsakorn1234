@@ -1,106 +1,15 @@
 body {
-    background-color: #5b38c2;
+    background-color: #19dd4a;
     text-align: center;
 }
 
 div {
-    background-color: #ad0f0f;
+    background-color: #ffffff;
 }
 
 h1 {
     font-family: 'Prompt', sans-serif;
+    color: #f00000;
     font-size: 30px;
     font-weight: 600;
-}
-
-
-
-#enter {
-    border: 2px solid #29282c;
-    padding: 5px 15px;
-    border-radius: 5px;
-    color: #1ae22a;
-    background-color: #29282c;
-    font-size: 20px;
-    font-family: 'Prompt', sans-serif;
-    transition: all 0.55s ease;
-}
-
-#enter :hover {
-    font-size: 22px;
-    font-family: 'Prompt', sans-serif;
-}
-
-ul {
-    text-align: left;
-    margin-top: 20px;
-}
-
-li {
-    list-style: none;
-    padding: 10px 20px;
-    color: #29282c;
-    text-transform: capitalize;
-    font-weight: 600;
-    margin-bottom: 10px;
-    background-color: #147cac;
-    border-bottom: 2px solid #29282c;
-    transition: all 0.75s ease;
-}
-
-li:hover {
-    border: 2px solid #29282c;
-    transition: all 0.50s ease;
-    border-radius: 5px;
-}
-
-#bt2 {
-    font-family: 'Prompt', sans-serif;
-    font-weight: 800;
-    background-color: none;
-    border: none;
-    float: right;
-    color: #29282c;
-}
-
-#bt2:hover {
-    font-family: 'Prompt', sans-serif;
-    font-weight: 850;
-    background-color: none;
-    color: #29282c;
-    border-radius: 5px;
-}
-
-#bt1 {
-    font-family: 'Prompt', sans-serif;
-    font-weight: 750;
-    background-color: none;
-    border: none;
-    float: right;
-    color: #d61717;
-}
-
-li>button {
-    font-family: 'Prompt', sans-serif;
-    font-weight: 750;
-    background-color: none;
-    border: none;
-    float: right;
-    color: #add617;
-}
-
-button.done {
-    color: #483680;
-    text-decoration: line-through;
-}
-
-button.delete {
-    font-family: 'Prompt', sans-serif;
-    font-weight: 750;
-    background-color: none;
-    border: none;
-    float: right;
-    color: #d61717;
-    float: right;
-    display: none;
 }
