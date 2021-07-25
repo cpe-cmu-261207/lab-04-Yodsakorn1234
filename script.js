@@ -53,6 +53,7 @@ function addToDoBlock(textAdd) {
 
     del.classList = 'button p-2 text-3xl font-semibold rounded-md '
     del.innerText = 'false'
+    del.style.visibility = "hidden"
     del.style.visibility = "reset"
 
     smallerDiv.append(done)
