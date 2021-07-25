@@ -26,87 +26,25 @@ todolist.forEach(element => {
 donelist.forEach(element => {
     addDoneList('init', element)
 });
-
-function setLocal() {
-    localStorage.TD = JSON.stringify(todolist)
-    localStorage.D = JSON.stringify(donelist)
-}
-
-function addToDoBlock(textAdd) {
-    const newDiv = document.createElement('div')
-    const smallerDiv = document.createElement('div')
-    const text = document.createElement('p')
-    const done = document.createElement('button')
-    const del = document.createElement('button')
-
-    newDiv.classList = 'px-4 shadow-inner shadow-xl flex block p-3 my-1 justify-between items-center  rounded-md '
-
-    smallerDiv.classList = 'space-x-5'
-
-    text.innerText = textAdd
-    text.classList = 'text-xl font-semibold'
-
-    done.classList = 'button p-2 text-xl font-semibold rounded-md '
-    done.innerText = 'true'
-    done.style.visibility = "hidden"
-
-    del.classList = 'button p-2 text-xl font-semibold rounded-md '
-    del.innerText = 'false'
-    del.style.visibility = "hidden"
-    
-
-    smallerDiv.append(done)
-    smallerDiv.append(del)
-    newDiv.append(text)
-    newDiv.append(smallerDiv)
-
-    const toDoListDiv = document.querySelector('#ToDoList')
-    toDoListDiv.append(newDiv)
-
-    newDiv.addEventListener('mouseover', () => {
-        done.style.visibility = "visible"
-        del.style.visibility = "visible"
-    })
-
-    newDiv.addEventListener('mouseout', () => {
-        done.style.visibility = "hidden"
-        del.style.visibility = "hidden"
-    })
-
-    del.addEventListener('click', () => {
-        todolist.splice(todolist.indexOf(text.innerText), 1)
-        setLocal()
-        newDiv.remove()
-    })
-
-    done.addEventListener('click', () => {
-        todolist.splice(todolist.indexOf(text.innerText), 1)
-        addDoneList('done', text.innerText)
-        newDiv.remove()
-    })
-}
-
 function addDoneBlock(textAdd) {
     const newDiv = document.createElement('div')
     const smallerDiv = document.createElement('div')
     const text = document.createElement('p')
     const svg = document.createElement('img')
-
-
     text.innerText = textAdd
     text.classList = 'text-xl'
     text.style.textDecoration = 'line-through'
-
     newDiv.classList = 'items-center shadow-md flex p-3 justify-between  rounded-md mt-2'
-
     newDiv.append(text)
     smallerDiv.append(svg)
     newDiv.append(smallerDiv)
-
     const DoneListDiv = document.querySelector('#DoneList')
     DoneListDiv.append(newDiv)
 }
-
+function setLocal() {
+    localStorage.TD = JSON.stringify(todolist)
+    localStorage.D = JSON.stringify(donelist)
+}
 function addToDoList(type, text) {
     if (type == 'input') {
         todolist.push(text)
@@ -114,7 +52,51 @@ function addToDoList(type, text) {
     }
     addToDoBlock(text)
 }
-
+reset.addEventListener('click', () => {
+    localStorage.clear()
+    location.reload()
+})
+function addToDoBlock(textAdd) {
+    const newDiv = document.createElement('div')
+    const smallerDiv = document.createElement('div')
+    const text = document.createElement('p')
+    const done = document.createElement('button')
+    const del = document.createElement('button')
+    newDiv.classList = 'px-4 shadow-inner shadow-xl flex block p-3 my-1 justify-between items-center  rounded-md '
+    smallerDiv.classList = 'space-x-5'
+    text.innerText = textAdd
+    text.classList = 'text-xl font-semibold'
+    done.classList = 'button p-2 text-xl font-semibold rounded-md '
+    done.innerText = 'true'
+    done.style.visibility = "hidden"
+    del.classList = 'button p-2 text-xl font-semibold rounded-md '
+    del.innerText = 'false'
+    del.style.visibility = "hidden"
+    smallerDiv.append(done)
+    smallerDiv.append(del)
+    newDiv.append(text)
+    newDiv.append(smallerDiv)
+    const toDoListDiv = document.querySelector('#ToDoList')
+    toDoListDiv.append(newDiv)
+    newDiv.addEventListener('mouseover', () => {
+        done.style.visibility = "visible"
+        del.style.visibility = "visible"
+    })
+    newDiv.addEventListener('mouseout', () => {
+        done.style.visibility = "hidden"
+        del.style.visibility = "hidden"
+    })
+    del.addEventListener('click', () => {
+        todolist.splice(todolist.indexOf(text.innerText), 1)
+        setLocal()
+        newDiv.remove()
+    })
+    done.addEventListener('click', () => {
+        todolist.splice(todolist.indexOf(text.innerText), 1)
+        addDoneList('done', text.innerText)
+        newDiv.remove()
+    })
+}
 function addDoneList(type, newText) {
     if (type == 'done') {
         donelist.push(newText)
@@ -122,7 +104,6 @@ function addDoneList(type, newText) {
     }
     addDoneBlock(newText)
 }
-
 btn.addEventListener('click', () => {
     if (input.value == '')
         alert("Task empty")
@@ -131,7 +112,6 @@ btn.addEventListener('click', () => {
         input.value = ''
     }
 })
-
 input.addEventListener('keyup', (evnt) => {
     if (evnt.keyCode == 13) {
         if (input.value == '')
@@ -143,7 +123,4 @@ input.addEventListener('keyup', (evnt) => {
     }
 })
 
-reset.addEventListener('click', () => {
-    localStorage.clear()
-    location.reload()
-})
+
