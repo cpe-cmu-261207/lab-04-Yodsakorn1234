@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let TodoStrr = []
 let DoneStrr = []
 if (localStorage.todoStrg)
@@ -17,6 +18,30 @@ input.addEventListener("keyup", function (event) {
     event.preventDefault();
     document.querySelector("#addbtn").click();
   }
+=======
+if (!localStorage.getItem("data")) {
+    const data = {
+        task: [],
+        done: [],
+    } 
+    localStorage.setItem("data", JSON.stringify(data))
+}
+const btn = document.querySelector('#✔')
+const input = document.querySelector('input')
+if (localStorage.getItem('TD') == null) {
+    localStorage.setItem('TD', JSON.stringify([]))
+}
+if (localStorage.getItem('D') == null) {
+    localStorage.setItem('D', JSON.stringify([]))
+}
+var todolist = JSON.parse(localStorage.getItem('TD'))
+var donelist = JSON.parse(localStorage.getItem('D'))
+todolist.forEach(element => {
+    addToDoList('init', element)
+});
+donelist.forEach(element => {
+    addDoneList('init', element)
+>>>>>>> cfc72c241818e27ee047b0d9606e0ab2d553100e
 });
 function addtask() {
   if (input.value == "") {
