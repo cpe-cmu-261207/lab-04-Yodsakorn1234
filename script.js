@@ -8,7 +8,6 @@ if (!localStorage.getItem("data")) {
 }
 const btn = document.querySelector('#✔')
 const input = document.querySelector('input')
-
 if (localStorage.getItem('TD') == null) {
     localStorage.setItem('TD', JSON.stringify([]))
 }
