@@ -2,8 +2,7 @@ if (!localStorage.getItem("data")) {
     const data = {
         task: [],
         done: [],
-    }
-        
+    } 
     localStorage.setItem("data", JSON.stringify(data))
 }
 const btn = document.querySelector('#✔')
