@@ -6,6 +6,14 @@ if (!localStorage.getItem("data")) {
         
     localStorage.setItem("data", JSON.stringify(data))
 }
+
+// ToDo List
+<div id='ToDoList' class='flex flex-col-reverse'>
+</div>
+// Done List
+<div id='DoneList' class='flex flex-col-reverse'>
+</div>
+
 const btn = document.querySelector('#✔')
 const input = document.querySelector('input')
 
