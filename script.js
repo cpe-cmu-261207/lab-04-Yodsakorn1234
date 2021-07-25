@@ -6,31 +6,19 @@ if (!localStorage.getItem("data")) {
         
     localStorage.setItem("data", JSON.stringify(data))
 }
-
-// ToDo List
-id='ToDoList' class='flex flex-col-reverse'
-
-// Done List
-id='DoneList' class='flex flex-col-reverse'
-
-
 const btn = document.querySelector('#✔')
 const input = document.querySelector('input')
-
 if (localStorage.getItem('TD') == null) {
     localStorage.setItem('TD', JSON.stringify([]))
 }
 if (localStorage.getItem('D') == null) {
     localStorage.setItem('D', JSON.stringify([]))
 }
-
 var todolist = JSON.parse(localStorage.getItem('TD'))
 var donelist = JSON.parse(localStorage.getItem('D'))
-
 todolist.forEach(element => {
     addToDoList('init', element)
 });
-
 donelist.forEach(element => {
     addDoneList('init', element)
 });
