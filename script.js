@@ -8,11 +8,11 @@ if (!localStorage.getItem("data")) {
 }
 
 // ToDo List
-<div id='ToDoList' class='flex flex-col-reverse'>
-</div>
+id='ToDoList' class='flex flex-col-reverse'
+
 // Done List
-<div id='DoneList' class='flex flex-col-reverse'>
-</div>
+id='DoneList' class='flex flex-col-reverse'
+
 
 const btn = document.querySelector('#✔')
 const input = document.querySelector('input')
