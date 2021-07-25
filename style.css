@@ -1,15 +1,35 @@
 body {
-    background-color: #19dd4a;
-    text-align: center;
+    background-color: #13e240;
+    background-repeat: no-repeat; 
+    background-size: large;
 }
-
 div {
-    background-color: #ffffff;
+    background-color: #b9df30;
 }
 
 h1 {
     font-family: 'Prompt', sans-serif;
-    color: #f00000;
+    color: #272094;
     font-size: 30px;
     font-weight: 600;
+}
+.truebtn{ 
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.falsebtn{ 
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#add{
+    font-size: 30px;
+    color: rgb(211, 26, 118);
 }
