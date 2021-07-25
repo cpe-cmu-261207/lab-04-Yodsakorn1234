@@ -39,21 +39,21 @@ function addToDoBlock(textAdd) {
     const done = document.createElement('button')
     const del = document.createElement('button')
 
-    newDiv.classList = 'px-4 shadow-inner shadow-2xl flex block p-3 my-1 justify-between items-center  rounded-md '
+    newDiv.classList = 'px-4 shadow-inner shadow-xl flex block p-3 my-1 justify-between items-center  rounded-md '
 
     smallerDiv.classList = 'space-x-5'
 
     text.innerText = textAdd
     text.classList = 'text-xl font-semibold'
 
-    done.classList = 'button p-2 text-3xl font-semibold rounded-md '
+    done.classList = 'button p-2 text-xl font-semibold rounded-md '
     done.innerText = 'true'
     done.style.visibility = "hidden"
 
-    del.classList = 'button p-2 text-3xl font-semibold rounded-md '
+    del.classList = 'button p-2 text-xl font-semibold rounded-md '
     del.innerText = 'false'
     del.style.visibility = "hidden"
-    del.style.visibility = "reset"
+    
 
     smallerDiv.append(done)
     smallerDiv.append(del)
@@ -94,7 +94,7 @@ function addDoneBlock(textAdd) {
 
 
     text.innerText = textAdd
-    text.classList = 'text-3xl'
+    text.classList = 'text-xl'
     text.style.textDecoration = 'line-through'
 
     newDiv.classList = 'items-center shadow-md flex p-3 justify-between  rounded-md mt-2'
@@ -125,7 +125,7 @@ function addDoneList(type, newText) {
 
 btn.addEventListener('click', () => {
     if (input.value == '')
-        alert("Task  empty")
+        alert("Task empty")
     else {
         addToDoList('input', input.value)
         input.value = ''
@@ -135,7 +135,7 @@ btn.addEventListener('click', () => {
 input.addEventListener('keyup', (evnt) => {
     if (evnt.keyCode == 13) {
         if (input.value == '')
-            alert("Task  empty")
+            alert("Task empty")
         else {
             addToDoList('input', input.value)
             input.value = ''
