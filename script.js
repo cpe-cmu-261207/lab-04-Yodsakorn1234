@@ -1,3 +1,11 @@
+if (!localStorage.getItem("data")) {
+    const data = {
+        task: [],
+        done: [],
+    }
+        
+    localStorage.setItem("data", JSON.stringify(data))
+}
 const btn = document.querySelector('#✔')
 const input = document.querySelector('input')
 const reset = document.querySelector('#❌')
@@ -32,12 +40,12 @@ function addToDoBlock(textAdd) {
     const done = document.createElement('button')
     const del = document.createElement('button')
 
-    newDiv.classList = 'px-5 shadow-inner shadow-2xl flex block p-3 my-1 justify-between items-center  rounded-md '
+    newDiv.classList = 'px-4 shadow-inner shadow-2xl flex block p-3 my-1 justify-between items-center  rounded-md '
 
     smallerDiv.classList = 'space-x-5'
 
     text.innerText = textAdd
-    text.classList = 'text-4xl font-semibold'
+    text.classList = 'text-xl font-semibold'
 
     done.classList = 'button p-2 text-3xl font-semibold rounded-md '
     done.innerText = 'true'
@@ -45,7 +53,7 @@ function addToDoBlock(textAdd) {
 
     del.classList = 'button p-2 text-3xl font-semibold rounded-md '
     del.innerText = 'false'
-    del.style.visibility = "hidden"
+    del.style.visibility = "reset"
 
     smallerDiv.append(done)
     smallerDiv.append(del)
@@ -117,7 +125,7 @@ function addDoneList(type, newText) {
 
 btn.addEventListener('click', () => {
     if (input.value == '')
-        alert("Task cannot empty")
+        alert("Task  empty")
     else {
         addToDoList('input', input.value)
         input.value = ''
@@ -127,7 +135,7 @@ btn.addEventListener('click', () => {
 input.addEventListener('keyup', (evnt) => {
     if (evnt.keyCode == 13) {
         if (input.value == '')
-            alert("Task cannot empty")
+            alert("Task  empty")
         else {
             addToDoList('input', input.value)
             input.value = ''
