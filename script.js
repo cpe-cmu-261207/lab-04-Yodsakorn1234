@@ -50,7 +50,6 @@ function show() {
     newtask.classList.add("text-2xl")
     div.classList.add("border-b-2")
     div.classList.add("border-white-400")
-    
     donebtn.style.visibility='hidden'
     deletebtn.style.visibility='hidden'
     div.addEventListener("mouseover",function(){
