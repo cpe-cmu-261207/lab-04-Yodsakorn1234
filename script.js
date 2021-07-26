@@ -20,7 +20,7 @@ input.addEventListener("keyup", function (event) {
 });
 function addtask() {
   if (input.value == "") {
-    alert("Cannot left it empty")
+    alert("Task be empty")
   } else {
     const commingtask = input.value
     task[0].push(commingtask)
